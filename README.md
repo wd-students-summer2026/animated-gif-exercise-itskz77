@@ -1,4 +1,4 @@
-# Animated GIF Assignment
+# Animated GIF Exercise
 
 Welcome! In this assignment, you are to create an animated picture of yourself in GIF format using Photoshop.
 
