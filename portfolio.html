@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Big Face Cafe Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+
+  <body class="bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <nav x-data="{ open: false }" class="bg-white p-4 mt-4">
+        <div class="flex justify-between">
+          <a href="professional_site.html" class="text-xl font-bold">
+            Big Face Cafe
+          </a>
+
+          <button @click="open = !open" class="md:hidden bg-gray-800 text-white p-2">
+            Menu
+          </button>
+
+          <div class="hidden md:flex gap-4">
+            <a href="professional_site.html">Home</a>
+            <a href="services.html">Menu</a>
+            <a href="portfolio.html">Gallery</a>
+          </div>
+        </div>
+
+        <div x-show="open" class="md:hidden mt-4">
+          <a href="professional_site.html" class="block">Home</a>
+          <a href="services.html" class="block">Menu</a>
+          <a href="portfolio.html" class="block">Gallery</a>
+        </div>
+      </nav>
+
+      <header class="bg-white p-4 mt-4">
+        <h1 class="text-3xl md:text-4xl font-bold">
+          Gallery
+        </h1>
+
+        <p class="mt-2">
+          A few images from Big Face Cafe.
+        </p>
+      </header>
+
+      <main class="bg-white p-4 mt-4">
+        <div x-data="{ images: ['images/cafe1.png', 'images/cafe2.png', 'images/cafe3.png'], current: 0 }">
+          <img :src="images[current]" alt="Cafe gallery image" class="w-full md:w-1/2">
+
+          <div class="mt-4">
+            <button @click="current = current === 0 ? images.length - 1 : current - 1" class="bg-gray-800 text-white p-2">
+              Previous
+            </button>
+
+            <button @click="current = current === images.length - 1 ? 0 : current + 1" class="bg-gray-800 text-white p-2">
+              Next
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <section class="bg-white p-4 mt-4">
+        <h2 class="text-2xl font-bold">Cafe Space</h2>
+
+        <p class="mt-2 site-note">
+           Big Face Café is a small local cafe. The goal is to serve every delicious food and drink to local students, so the first principle in our shop is serving everything in affordable prices!
+      </section>
+
+      <footer class="text-center text-sm py-6">
+        <p>© 2026 Big Face Cafe</p>
+      </footer>
+    </div>
+  </body>
+</html>

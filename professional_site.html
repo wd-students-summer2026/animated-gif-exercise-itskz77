@@ -1,0 +1,85 @@
+<!-- insert your HTML code here -->
+<!-- don't forget to make two other HTML documents also -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Big Face Café</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+
+  <body class="bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <nav x-data="{ open: false }" class="bg-white p-4 mt-4">
+        <div class="flex justify-between">
+          <a href="professional_site.html" class="text-xl font-bold">
+            Big Face Café
+          </a>
+
+          <button @click="open = !open" class="md:hidden bg-gray-800 text-white p-2">
+            Menu
+          </button>
+
+          <div class="hidden md:flex gap-4">
+            <a href="professional_site.html">Home</a>
+            <a href="services.html">Menu</a>
+            <a href="portfolio.html">Gallery</a>
+          </div>
+        </div>
+
+        <div x-show="open" class="md:hidden mt-4">
+          <a href="professional_site.html" class="block">Home</a>
+          <a href="services.html" class="block">Menu</a>
+          <a href="portfolio.html" class="block">Gallery</a>
+        </div>
+      </nav>
+
+      <header class="bg-white p-4 mt-4">
+        <h1 class="text-3xl md:text-4xl font-bold">
+          Big Face Café
+        </h1>
+
+        <p class="mt-2">
+          A small neighborhood cafe serving coffee, tea, pastries, and simple lunch.
+        </p>
+      </header>
+
+      <main class="grid md:grid-cols-3 gap-4 mt-4">
+        <section class="bg-white p-4 card-border">
+          <h2 class="text-2xl font-bold">Coffee</h2>
+          <p>
+            We serve simple coffee drinks for mornings and study breaks.
+          </p>
+        </section>
+
+        <section class="bg-white p-4 card-border">
+          <h2 class="text-2xl font-bold">Pastries</h2>
+          <p>
+            We offer small pastries and snacks with coffee or tea.
+          </p>
+        </section>
+
+        <section class="bg-white p-4 card-border">
+          <h2 class="text-2xl font-bold">Lunch</h2>
+          <p>
+            We have quick lunch bites like sandwiches and salads.
+          </p>
+        </section>
+      </main>
+
+      <section class="bg-white p-4 mt-4">
+        <h2 class="text-2xl font-bold">About the Cafe</h2>
+
+        <p class="mt-2 site-note">
+          Big Face Café is a small local cafe. The goal is to serve every delicious food and drink to local students, so the first principle in our shop is serving everything in affordable prices!
+        </p>
+      </section>
+
+      <footer class="text-center text-sm py-6">
+        <p>© 2026 Big Face Café</p>
+      </footer>
+    </div>
+  </body>
+</html>
